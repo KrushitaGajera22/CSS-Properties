@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Property</title>
+    <style>
+        body{
+            counter-reset: counter1;
+            counter-reset: counter3;
+            border: 1px solid;
+            padding: 15px;
+        }
+        h2{
+            counter-reset: counter2;
+        }
+        h2::before{
+            counter-increment: counter3;
+            content:  counter(counter3) ". ";
+        }
+        h4::before{
+            margin-left: 20px;
+            counter-increment: counter1;
+            content:  counter(counter1) ". ";
+        }
+        
+        h3::before{
+            margin-left: 20px;
+            counter-increment: counter2;
+            content: counter(counter3) "." counter(counter2) " ";
+        }
+        ol{
+            counter-reset: mycounter;
+            list-style-type: none;
+        }
+        li::before{
+            counter-increment: mycounter;
+            content:  counter(mycounter) ". ";
+        }
+
+        @media (min-width: 1200px){
+            body{
+                column-count: 3;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tutorials: </h1>
+    <h4>HTML Tutorial</h4>
+    <h4>CSS Tutorial</h4>
+    <h4>Bootstrap Tutorial</h4>
+    <h4>PHP Tutorial</h4>
+    <h4>Java Tutorial</h4>
+    <br>
+    <br>
+    <h2>HTML Tutorial </h2>
+    <h3>Introduction</h3>
+    <h3>Elements</h3>
+    <h3>Attributes</h3>
+    <h3>Headings</h3>
+    <h3>Forms</h3>
+    <h3>Input Types</h3>
+    <br>
+    <br>
+    <br>
+    <ol>
+        <li>Subjects: 
+            <ol>
+                <li>PHP</li>
+                <li>Java
+                    <ol>
+                        <li>Introduction</li>
+                        <li>OOPS concepts</li>
+                    </ol>
+                </li>
+                <li>Python</li>
+            </ol>
+        </li>
+
+    </ol>
+</body>
+</html>

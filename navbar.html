@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+
+    <style>
+        ul{
+            list-style-type: none;
+            background-color: rgb(191, 195, 195);
+            overflow: hidden;
+        }
+        li{
+            float: left;
+        }
+        li a , .dropbtn{
+            display: inline-block;
+            font-size: 20px;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+        }
+        .active{
+            background-color: darkgray;
+            color: white;
+        }
+        li a:hover, .dropdown:hover .dropbtn{
+            background-color: rgb(144, 214, 214);
+            color: white;
+        }
+        .dropdown-content{
+            display: none ;
+            position: absolute;
+            background-color: rgb(191, 195, 195);
+            min-width: 200px;
+        }
+        .dropdown-content a{
+            text-align: left;
+            color: black;
+            padding: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(129, 132, 135);
+            color: white;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+
+
+</head>
+<body>
+    <ul>
+        <li> <a class="active" href="#home">Home</a></li>
+        <li> <a href="#">C</a></li>
+        <li> <a href="#">C++</a></li>
+        <li> <a href="#">PHP</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Web Designing</a>
+            <div class="dropdown-content">
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">BootStrap</a>
+            </div>
+        </li>
+    </ul>
+    <h2>Welcome </h2>
+</body>
+</html>

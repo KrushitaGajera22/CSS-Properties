@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Shadow Property</title>
+    <style>
+        div{
+            border: 1px solid;
+            padding: 10px;
+            width: 50vw;
+        }
+        p{
+            text-align: center;
+            font-size: large;
+            padding: 5px;
+        }
+        p.shadow{
+            text-shadow: 2px 2px 4px cornflowerblue;
+        }
+        p.glow{
+            background-color: black;
+            text-shadow: 1px 0.6px  cyan;
+        }
+        p.multi{
+            text-shadow: -2px -2px 2px burlywood 2px 2px 2px brown;
+        }
+        #a{
+            box-shadow: 5px 5px;
+        }
+        #b{
+            box-shadow: 5px 5px 10px;
+        }
+        #c{
+            box-shadow: 5px 5px 10px 5px;
+        }
+        #d{
+            box-shadow: 5px 5px 10px 5px rgb(52, 134, 205);
+        }
+        #e{
+            box-shadow: 5px 5px 10px 5px rgb(125, 176, 222) inset;
+        }
+        #f{
+            box-shadow: initial;
+        }
+        #g{
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="shadow">
+        shadow
+    </p>
+    <p class="glow">
+        Glow
+    </p>
+    <p class="multi">
+        Multiple Shadow 
+    </p>
+    <div id="a">
+        <h3>box shadow with h-offset and v-offset</h3>
+    </div>
+    <br><br>
+    <div id="b">
+        <h3>box shadow with h-offset v-offset blur</h3>
+    </div>
+    <br><br>
+    <div id="c">
+        <h3>box shadow with h-offset v-offset blur spread</h3>
+    </div>
+    <br><br>
+    <div id="d">
+        <h3>box shadow with h-offset v-offset blur spread color</h3>
+    </div>
+    <br><br>
+    <div id="e">
+        <h3>box shadow with h-offset v-offset blur spread color inset</h3>
+    </div>
+    <br><br>
+    <div id="f">
+        <h3>box shadow with initial value</h3>
+    </div>
+    <br><br>
+    <div id="g">
+        <h3>box shadow with none</h3>
+    </div>
+</body>
+</html>
